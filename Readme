@@ -1,4 +1,9 @@
-Algorithm 
+problem statement:Create a C program called LOOPLAB to analyse daily expenses. Repeatedly read expense amounts until the user enters 0. For each positive
+amount, classify it using the rules below, update counts and totals, and finally display a summary. Use loops, conditional statements, arithmetic
+operators, and variables. Do not use arrays, functions, or strings.
+
+Algorithm
+
 Start.
 Read the number of days.
 Initialize total = 0.
@@ -8,34 +13,3 @@ If the expense is greater than ₹500, display “High Expense”; otherwise, di
 Calculate the average expense.
 Display the total and average expenses.
 Stop.
-c program 
-#include <stdio.h>
-
-int main()
-{
-    int n, i;
-    float expense, total = 0, average;
-
-    printf("Enter number of days: ");
-    scanf("%d", &n);
-
-    for(i = 1; i <= n; i++)
-    {
-        printf("Enter expense for day %d: ", i);
-        scanf("%f", &expense);
-
-        total = total + expense;
-
-        if(expense > 500)
-            printf("High Expense\n");
-        else
-            printf("Normal Expense\n");
-    }
-
-    average = total / n;
-
-    printf("Total Expense = %.2f\n", total);
-    printf("Average Expense = %.2f\n", average);
-
-    return 0;
-}
