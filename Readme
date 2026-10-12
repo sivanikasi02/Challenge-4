@@ -1,0 +1,41 @@
+Algorithm 
+Start.
+Read the number of days.
+Initialize total = 0.
+Use a loop to read the expense for each day.
+Add each expense to total.
+If the expense is greater than ₹500, display “High Expense”; otherwise, display “Normal Expense”.
+Calculate the average expense.
+Display the total and average expenses.
+Stop.
+c program 
+#include <stdio.h>
+
+int main()
+{
+    int n, i;
+    float expense, total = 0, average;
+
+    printf("Enter number of days: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        printf("Enter expense for day %d: ", i);
+        scanf("%f", &expense);
+
+        total = total + expense;
+
+        if(expense > 500)
+            printf("High Expense\n");
+        else
+            printf("Normal Expense\n");
+    }
+
+    average = total / n;
+
+    printf("Total Expense = %.2f\n", total);
+    printf("Average Expense = %.2f\n", average);
+
+    return 0;
+}
